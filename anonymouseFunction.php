@@ -13,9 +13,9 @@ function sayGoodBay(string $name, $filter) {
 }
 
 // 
-sayGoodBay("Zan", function(string $name): string{
-    return strtoupper($name);
-});
+// sayGoodBay("Zan", function(string $name): string{
+//     return strtoupper($name);
+// });
 
 // 
 $filterFunction = function(string $name): string{
@@ -23,3 +23,12 @@ $filterFunction = function(string $name): string{
 };
 
 sayGoodBay("Zan", $filterFunction);
+
+$firstName = "Eva";
+$lastName = "Eunha";
+
+$finalOutput = function() use ($firstName, $lastName) {
+    echo "Hello $firstName $lastName" . PHP_EOL;
+};
+
+$finalOutput();
